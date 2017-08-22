@@ -1,0 +1,49 @@
+<html>
+	<head>
+		<title>MyProfile</title>
+		
+		<script language="javascript">
+			function squareTheNumber(number){
+				console.log(number * number);
+				alert(number*number);
+				document.write(number*number);
+				return number * number;
+			}
+			
+			function addThreeNumbers(number1, number2, number3){
+				console.log(number1 + number2 + number3);
+				alert(number1 + number2 + number3);
+				document.write(number1 + number2 + number3);
+				return number1 + number2 + number3;
+			}
+			
+			var Person = {name: "Jack", age: 22, occupation: "Consultant"}
+			
+			function incrementPersonAge(person){
+				person.age += 1;
+				alert(person.age)
+			}
+			
+			//document.write("Name: "+Person.name +" "+"Age: "+Person.age+" "+"Occupation: "+Person.occupation);
+		</script>
+	</head>
+	<body>
+		<div id="title">
+		<h1>Personnel Profile</h1>
+		</div>
+		<div id="subheading">
+			<h2>About Me</h2> 
+		</div>
+		<div>
+			<ul id="nav">
+				<li><a href="home.html">Home</a></li>
+				<li><a href="projectlist.html">Projects List</a></li>
+				<li><a href="AboutMe.html">About Me</a></li>
+			</ul>
+			<button name="Click Me!" onclick="incrementPersonAge(Person)">Click me</button>
+		</div>
+		<div id="maincontent">
+		
+		</div>
+	</body>
+</html>

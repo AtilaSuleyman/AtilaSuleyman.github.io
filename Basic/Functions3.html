@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<title>MyProfile</title>
+		
+		<script language="javascript">
+		function createPerson(name, age, occupation){
+			alert(name);
+			var Person = {Name: "", Age: 22, Occupation: ""};
+			Person.Name = name;
+			Person.Age = age;
+			Person.Occupation = occupation;
+			alert("Name: "+Person.Name +" "+"Age: "+Person.Age+" "+"Occupation: "+Person.Occupation);
+		}
+		</script>
+	</head>
+	<body>
+		<div>
+			<form action="/action_page.php">
+				Name: <input id="nameBox" type="text" value=""><br>
+				Age: <input id="ageBox" type="text" value=""><br>
+				Occupation: <input id="occupationBox" type="text" value=""><br>
+			<input type="button" onclick="createPerson(nameBox.value, ageBox.value, occupationBox.value)"value="Submit"/>
+</form>
+		</div>
+	</body>
+</html>
