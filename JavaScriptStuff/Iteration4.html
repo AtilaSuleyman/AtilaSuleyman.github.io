@@ -1,11 +1,25 @@
 <html>
 	<head>
-		<title>MyProfile</title>
+		<title>Iteration4</title>
 		<script language="javascript" src="Iteration4.js"></script>
 	</head>
 	<body>
-		<script language="javascript">
-			divisibleByThree(10);
-		</script>
+
+		<h1>Iteration4</h1>
+		<h3>This is not the solution to Iteration4. For that, please look at "Iteration4v2"</h3>
+		<h4>Outputs the result of numbers when they are divided by 3 to the console, as well as the amount of iterations it takes</h4>
+		<p>
+			Loops through numbers 1 to a user specified number.
+			If a number is <b>divisible by 3</b>, the result of the number divided by 3 will be printed<br>
+			If the number <b>is not divisible by 3</b>, the <b>number will be incremented by 1</b> until it is.<br>
+			The result will then be printed to the console.
+		</p>
+		<form>
+  			Enter your number:<br>
+  			<input type="text" name="numBox" id="contentBox" value="">
+  			<br>
+  			<br>
+  			<button type="button" onclick="divisibleByThree(contentBox.value)">Submit</button>
+	    </form> 
 	</body>
 </html>

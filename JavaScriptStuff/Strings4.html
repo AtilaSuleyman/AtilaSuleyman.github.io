@@ -4,8 +4,14 @@
 		<script language="javascript" src="Strings4.js"></script>
 	</head>
 	<body>
-		<script language="javascript">
-			countForTriples("aaabbccccddde");
-		</script>
+		<h1>Find Triples</h1>
+		<h3>Returns the amount of triples (3 characters in a row) there are in an input string </h3>
+		<form>
+            Enter your word:<br>
+            <input type="text" name="searchBox" id="contentBox" value="">
+            <br>
+			<p id="output"></p>
+            <button type="button" onclick="countForTriples(contentBox.value)">Go!</button>
+        </form> 
 	</body>
 </html>

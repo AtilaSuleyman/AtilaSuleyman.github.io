@@ -1,16 +1,25 @@
 <html>
 	<head>
-		<title>MyProfile</title>
+		<title>Iteration4v2</title>
 		<script language="javascript" src="Iteration4v2.js"></script>
 	</head>
 	<body>
-	<form>
+
+		<h1>Iteration4v2</h1>
+		<h3>Keeps finding ways to divide a specified number by 3. Outputs the amount of steps taken</h3>
+		<p>
+			If a number is divisible by 3, the number is divided by 3<br>
+			If a number is not divisible by 3, a check is made to see whether its successor is divisible by 3<br>
+			If the successor is not divisible by 3, it divides its predecessor by 3<br>
+			Once the number hits 1, the amount of steps taken is outputted<br>
+		</p>
+		<form>
   			Enter your number:<br>
-  			<input type="text" name="numBox" id="contentBox" value="Enter number here">
+  			<input type="text" name="numBox" id="contentBox" value="">
   			<br>
   			<br>
   			<button type="button" onclick="divideByThree(contentBox.value)">Submit</button>
-	</form> 
+		</form> 
 	<p id="p1"></p>
 	</body>
 </html>

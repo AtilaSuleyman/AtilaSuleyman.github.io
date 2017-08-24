@@ -1,11 +1,32 @@
 <html>
 	<head>
-		<title>MyProfile</title>
+		<title>Fizz Buzz</title>
 		<script language="javascript" src="FizzBuzz.js"></script>
 	</head>
 	<body>
-		<script language="javascript">
-			FizzBuzz(70, "divisibleBy3", "divisibleBy5");
-		</script>
+			<h1>Fizz Buzz</h1>
+			<h3>Outputs numbers from 1 to a user specified number and determines whether a number is divisable by 3,5 or both</h3>
+			<p>
+				If a number is <b>divisible by 5 and 3</b>, <b>"FizzBuzz"</b> will be printed <br>
+				If a number is <b>divisible by 3</b>, the appropriate word is printed<br>
+				The <b>same case is true</b> when a <b>number is divisible by 5</b><br>
+				The user can <b>specify words that are printed</b> using the text boxes below
+			</p>
+			<form>
+  			Enter your number:<br>
+  			<input type="text" name="numBox" id="numBox" value="">
+			<br>
+			<br>
+			Enter your text for divisable by 3:<br>
+			<input type="text" name="divThree" id="divThreeBox" value="">
+			<br>
+			<br>
+			Enter your text for divisable by 5:<br>
+			<input type="text" name="divFive" id="divFiveBox" value="">
+			<br>
+			<br>
+  			<button type="button" onclick="FizzBuzz(numBox.value, divThreeBox.value, divFiveBox.value)">Submit</button>
+	</form> 
+	<p id="output"></p>
 	</body>
 </html>

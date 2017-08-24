@@ -1,17 +1,24 @@
 function FizzBuzz(numLimit, wordForThree, wordForFive){
-		for(var i = 0; i< numLimit; i++)
+	let output = document.getElementById("output");
+	output.innerHTML = "";
+	let breakPoint = document.createElement("br");
+		for(var i = 1; i<= numLimit; i++)
 		{
 			if(i%3==0 && i%5==0){
-				console.log("FizzBuzz");
+				output.innerHTML += "FizzBuzz";
+				output.appendChild(breakPoint);
 			}
 			else if(i%3==0){
-				console.log(wordForThree);
+				output.innerHTML += wordForThree;
+				output.appendChild(breakPoint);
 			}
 			else if(i%5==0){
-				console.log(wordForFive);
+				output.innerHTML += wordForFive;
+				output.appendChild(breakPoint);
 			}
 			else{
-				console.log(i);
+				output.innerHTML += i;
+				output.appendChild(breakPoint);
 			}
 		}
 	}

@@ -11,7 +11,7 @@ function searchJson(searchFeature){
             var p2 = document.createElement("p");
             p1.innerHTML = "";
             requestData.forEach(function(element) {
-                if(element.nm === searchFeature){  
+                if(element.nm.toUpperCase() === searchFeature.toUpperCase()){  
                     p1.innerHTML += "Name: "+element.nm;
                     p1.appendChild(br);
                     p1.innerHTML += "City: "+element.cty;
@@ -22,7 +22,7 @@ function searchJson(searchFeature){
                     p1.appendChild(br);
                     p1.appendChild(p2);
                 }
-                else if(element.cty === searchFeature){  
+                else if(element.cty.toUpperCase() === searchFeature.toUpperCase()){  
                     p1.innerHTML += "Name: "+element.nm;
                     p1.appendChild(br);
                     p1.innerHTML += "City: "+element.cty;
@@ -33,7 +33,7 @@ function searchJson(searchFeature){
                     p1.appendChild(br);
                     p1.appendChild(p2);
                 }
-                else if(element.hse === searchFeature){
+                else if(element.hse.toUpperCase() === searchFeature.toUpperCase()){
                     p1.innerHTML += "Name: "+element.nm;
                     p1.appendChild(br);
                     p1.innerHTML += "City: "+element.cty;
