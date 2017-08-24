@@ -1,0 +1,85 @@
+<html>
+	<head>
+		<title>Garage</title>
+		<script language="javascript" src="Garage.js"></script>
+		<meta content="texxt/html;charset=utf-8" http-equiv="Content-Type">
+		<meta content="utf-8" http-equiv="encoding">
+	</head>
+	<body>
+        <h2>Admin Console</h2>
+        <form name="adminRequest">
+            <p>
+                <p>
+                    Commands:<br>
+                    <b>allcars:</b> prints all cars in garage<br>
+                    <b>create car model year regNum faults:</b> creates a car with the given attributes<br> 
+                    <b>checkin regNum:</b> checks in the car into the garage that matches the reg number<br>
+                    <b>checkout regNum:</b> checks out the car from the garage that has the specified reg number<br>
+                </p>
+                    Enter your command:<br>
+                    <input type="text" name="searchBox" id="adminBox" value="">
+            </p>
+            <p id="p5"></p>
+            <button type="button" onclick=" executeRequest(adminBox.value)">Sumbit Request</button>
+        </form>
+        <h2>Create your car!</h2>
+        <form name="submitForm">
+            <p>
+                    Enter your car brand:<br>
+                    <input type="text" name="searchBox" id="brandBox" value="">
+            </p>
+            <p>
+                    Enter your car model:<br>
+                    <input type="text" name="searchBox" id="modelBox" value="">
+            </p>
+            <p>
+                    Enter your car year:<br>
+                    <input type="text" name="searchBox" id="yearBox" value="">
+            </p>
+            <p>
+                    Enter your reg number:<br>
+                    <input type="text" name="searchBox" id="regNoBox" value="">
+            </p>
+            <p>
+                    Enter number of faults:<br>
+                    <input type="text" name="searchBox" id="faultBox" value="">
+            </p>
+            <p id="p1"></p>
+            <button type="button" onclick="createCar(brandBox.value, modelBox.value, yearBox.value, regNoBox.value, faultBox.value)">Create car</button>
+        </form> 
+        <h2>Check in your car!</h2>
+        <form name="checkIn">
+            <p>
+                    Enter your reg number:<br>
+                    <input type="text" name="searchBox" id="checkInBox" value="">
+            </p>
+            <p id="p6"></p>
+            <button type="button" onclick=" checkInCar(checkInBox.value)">Check In</button>
+        </form>
+        <h2>Check out your car!</h2>
+        <form name="checkOutForm">
+            <p>
+                    Enter your reg number:<br>
+                    <input type="text" name="searchBox" id="regBox" value="">
+            </p>
+            <p id="p2"></p>
+            <button type="button" onclick="removeVehicle(regBox.value)">Check out car</button>
+        </form>
+        <h2>Check your bill for a car:</h2>
+        <form name="billsForm">
+            <p>
+                    Enter your reg number:<br>
+                    <input type="text" name="searchBox" id="billBox" value="">
+            </p>
+            <p id="p4"></p>
+            <button type="button" onclick="calculateFees(billBox.value)">Get Bill</button>
+        </form>
+        <h2>Look at the current cars in your garage:</h2>
+        <form name="garageForm">
+                <button type="button" onclick="loadGarage()">Load your garage</button>
+        </form> 
+        <p id="p3">
+                    
+         </p>
+	</body>
+</html>
