@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Hangman</title>
+        <script language="javascript" src="Hangman.js"></script>
+    </head>
+    <body>
+        <h1>Hangman</h1>
+        <h3>The classic game of Hangman!</h3>
+        <p>Players can select a difficulty, once hit the game will start!</p>
+        <p>A player can type in a word and submit their guess</p>
+        <p>Please enter either "easy", "medium", or "hard" into the difficulty box below:</p>
+        <form>
+            Enter your difficulty:
+            <input type="text" name="difficulty box" id="difBox" value="">
+            <br>
+            <button type="button" onclick="playHangman(difBox.value)">Start Playing!</button>
+        </form>
+        <br>
+        <form>
+            guess the letter:
+            <input type="text" name="name" id="guess" value="">
+            <br>
+            <button type="button" onclick="playerGuess(guess.value)">Submit Guess</button>
+        </form>
+        <p id="draw"></p>
+        <p id = "output"></p>
+    </body>
+
+
+</html>
