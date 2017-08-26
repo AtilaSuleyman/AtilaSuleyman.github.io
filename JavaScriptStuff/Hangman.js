@@ -84,7 +84,7 @@ function playerGuess(letter) {
     }
     else if (!guessedCorrect) {
         lives = lives - 1;
-        document.getElementById("draw").innerHTML = '<img src="' + lives + '.PNG" width="200" height="400">';
+        document.getElementById("draw").innerHTML = '<img src="' + lives + '.png" width="200" height="400">';
     }
     if (lives === 0) {
         alert("You have Lost");
