@@ -9,22 +9,22 @@
         <p>Players can select a difficulty, once hit the game will start!</p>
         <p>A player can type in a word and submit their guess</p>
         <p>Please enter either "easy", "medium", or "hard" into the difficulty box below:</p>
-        <form>
+        <form id="dif">
             Enter your difficulty:
             <input type="text" name="difficulty box" id="difBox" value="">
             <br>
             <button type="button" onclick="playHangman(difBox.value)">Start Playing!</button>
         </form>
         <br>
-        <form>
+        <form id="wordGuess">
             guess the letter:
             <input type="text" name="name" id="guess" value="">
             <br>
             <button type="button" onclick="playerGuess(guess.value)">Submit Guess</button>
         </form>
-        <p id="draw"></p>
         <p id = "output"></p>
+        <h3>Here are your guessed letters below: </h3>
+        <p id = "guessedWords"></p>
+        <p id="draw"></p>
     </body>
-
-
 </html>

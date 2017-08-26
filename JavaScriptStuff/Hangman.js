@@ -3,7 +3,6 @@ let wordList = ["hello", "tuesday", "pedagogical", "thursday", "friday", "dissat
 let lives = 7;
 let wordToPlay = "";
 let urlOfWordList = "https://raw.githubusercontent.com/dwyl/english-words/master/words.txt";
-let newWordsList = "";
 
 function selectWord() {
     let randomWord = Math.floor(Math.random() * wordList.length);
@@ -41,7 +40,7 @@ function getArrayOfDiff(word) {
 
 
 function playHangman(difficulty) {
-    console.log(newWordsList.length);
+    document.getElementById("dif").reset();
     wordList = getArrayOfDiff(difficulty);
     wordToPlay = selectWord();
     let amountOfDashes = wordToPlay.length;
@@ -58,6 +57,9 @@ function playHangman(difficulty) {
 }
 
 function playerGuess(letter) {
+    document.getElementById("wordGuess").reset();
+    let lettersGuessed = document.getElementById("guessedWords");
+    lettersGuessed.innerHTML += letter +" ";
     let guessedCorrect = false;
     let wordLength = wordToPlay.length;
     let splitString = wordToPlay.split('');
@@ -66,7 +68,7 @@ function playerGuess(letter) {
     output.innerHTML = "";
     for (let i = 0; i < splitString.length; i++) {
         if (splitString[i].toUpperCase() === letter.toUpperCase()) {
-            dashArray[i] = letter;
+            dashArray[i] = splitString[i];
             guessedCorrect = true;
         }
     }
@@ -88,6 +90,8 @@ function playerGuess(letter) {
     }
     if (lives === 0) {
         alert("You have Lost");
+        alert("The word was.....");
+        alert(wordToPlay);        
         location.reload();
     }
 }
